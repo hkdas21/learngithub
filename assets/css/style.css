@@ -1,0 +1,508 @@
+/* ============================================
+   GitHub Certifications Study Guide — Styles
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-surface-hover: #1c2129;
+  --color-border: #30363d;
+  --color-text: #e6edf3;
+  --color-text-muted: #8b949e;
+  --color-link: #58a6ff;
+  --color-accent: #2088ff;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --radius: 8px;
+  --max-width: 1200px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #79c0ff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  font-family: var(--font-mono);
+  background: var(--color-surface);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* --- Container --- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Header --- */
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.site-logo:hover {
+  color: var(--color-text);
+}
+
+.site-logo svg {
+  flex-shrink: 0;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: background 0.2s, color 0.2s;
+}
+
+.site-nav a:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+/* --- Hero --- */
+.hero {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Certification Grid --- */
+.certifications {
+  padding: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.cert-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  color: var(--color-text);
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+
+.cert-card-code {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.cert-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cert-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.cert-card-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-link);
+}
+
+/* --- Author Bio --- */
+.author-bio {
+  padding: 3rem 0;
+}
+
+.author-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.author-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.author-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.author-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.author-title {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.author-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.author-link {
+  display: inline-block;
+  margin-right: 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* --- Certification Page Layout --- */
+.cert-page {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  min-height: calc(100vh - 120px);
+}
+
+.cert-sidebar {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+}
+
+.cert-sidebar h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cert-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cert-nav a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  transition: background 0.2s, color 0.2s;
+}
+
+.cert-nav a:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.cert-nav a.active {
+  background: var(--color-surface);
+  color: var(--color-link);
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+}
+
+.back-link {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* --- Certification Content --- */
+.cert-content {
+  min-width: 0;
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cert-badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.cert-content h1 {
+  font-size: 1.75rem;
+}
+
+.cert-content h2 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cert-content h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cert-content p {
+  margin-bottom: 1rem;
+}
+
+.cert-content ul, .cert-content ol {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.cert-content li {
+  margin-bottom: 0.35rem;
+}
+
+.cert-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.cert-content th, .cert-content td {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  border: 1px solid var(--color-border);
+}
+
+.cert-content th {
+  background: var(--color-surface);
+  font-weight: 600;
+}
+
+/* --- Quiz & Flashcard Styles --- */
+.cert-content details {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.cert-content details summary {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  list-style: none;
+}
+
+.cert-content details summary::-webkit-details-marker {
+  display: none;
+}
+
+.cert-content details summary::before {
+  content: "▶ ";
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.cert-content details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.cert-content details summary:hover {
+  background: var(--color-surface-hover);
+}
+
+.cert-content details > :not(summary) {
+  padding: 0 1rem;
+}
+
+.cert-content details > p:last-child {
+  padding-bottom: 0.75rem;
+}
+
+/* --- Flashcard Grid --- */
+.flashcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* --- Footer --- */
+.site-footer {
+  margin-top: auto;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-page {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-sidebar {
+    position: static;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .cert-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .author-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
