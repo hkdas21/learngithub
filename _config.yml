@@ -2,8 +2,8 @@
 # Site settings
 title: GitHub Certifications Study Guide
 description: Comprehensive study materials for all five GitHub certification exams
-baseurl: "/github-cert-study-guide"  # Change to your repo name
-url: ""  # Your GitHub Pages URL, e.g., https://username.github.io
+baseurl: "/learngithub"  # Change to your repo name
+url: "https://hkdas21.github.io"  # Your GitHub Pages URL, e.g., https://username.github.io
 
 # Build settings
 markdown: kramdown
